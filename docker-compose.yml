@@ -1,0 +1,17 @@
+version: '2'
+services:
+  db:
+    env_file: .env
+    image: mariadb:10.1
+    volumes:
+      - ./data/db:/var/lib/mysql
+  demosite:
+    env_file: .env
+    build: .
+    links:
+      - db:db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data/uploads:/var/www/uploads
+      - ./data/logs:/var/www/logs
