@@ -2,7 +2,7 @@
 
 This is an example of dockerizing a PresideCMS application. It is made up of:
 
-* a `Dockerfile` that extends our [pixl8/preside-cms image](https://hub.docker.com/r/pixl8/preside-cms/) 
+* a `Dockerfile` that extends our [pixl8/preside-cms](https://hub.docker.com/r/pixl8/preside-cms/) image
 * a `docker-compose.yml` file to pull in and run a `MariaDB 10.1` container alongside our application's container
 * a `.env` file to set database environment variables that are then pushed to both the DB container (to create the DB and credentials if not created already) and the application (to register the datasource)
 * a skeleton PresideCMS web application (`/website`)
